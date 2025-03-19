@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>同局域网SSH连接其他机器WSL2配置记录 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="原文链接配置局域网下其他机器通过SSH连接到本机的WSL - 烤肉kr - 博客园 我目前的需求是，笔记本用来写代码，台式机配置了WSL2，这两台电脑在同一局域网下，需要时就SSH连接台式 重装SSH运行WSL的台式机需要重装一下SSH 12sudo apt remove openssh-serversudo apt install openssh-server  接着我们需要修改SSH的配置文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="同局域网SSH连接其他机器WSL2配置记录">
+<meta property="og:url" content="http://example.com/2025/03/17/%E5%90%8C%E5%B1%80%E5%9F%9F%E7%BD%91SSH%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8WSL2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="原文链接配置局域网下其他机器通过SSH连接到本机的WSL - 烤肉kr - 博客园 我目前的需求是，笔记本用来写代码，台式机配置了WSL2，这两台电脑在同一局域网下，需要时就SSH连接台式 重装SSH运行WSL的台式机需要重装一下SSH 12sudo apt remove openssh-serversudo apt install openssh-server  接着我们需要修改SSH的配置文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-17T11:41:47.000Z">
+<meta property="article:modified_time" content="2025-03-19T07:45:35.951Z">
+<meta property="article:author" content="ChenFeng">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录技术点滴</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-同局域网SSH连接其他机器WSL2配置记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/17/%E5%90%8C%E5%B1%80%E5%9F%9F%E7%BD%91SSH%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8WSL2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time class="dt-published" datetime="2025-03-17T11:41:47.000Z" itemprop="datePublished">2025-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      同局域网SSH连接其他机器WSL2配置记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>原文链接<a target="_blank" rel="noopener" href="https://www.cnblogs.com/st0rmKR/p/17809649.html">配置局域网下其他机器通过SSH连接到本机的WSL - 烤肉kr - 博客园</a></p>
+<p>我目前的需求是，笔记本用来写代码，台式机配置了WSL2，这两台电脑在同一局域网下，需要时就SSH连接台式</p>
+<h1 id="重装SSH"><a href="#重装SSH" class="headerlink" title="重装SSH"></a>重装SSH</h1><p>运行WSL的台式机需要重装一下SSH</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt remove openssh-server</span><br><span class="line"><span class="built_in">sudo</span> apt install openssh-server</span><br></pre></td></tr></table></figure>
+
+<p>接着我们需要修改SSH的配置文件，让SSH服务映射到某一个端口上，这里不能选22，因为会与Windows冲突。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>需要添加这几项：</p>
+<p>这里的3141是我想要映射的端口，你也可以选择任意其他的空闲端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Port 3141</span><br><span class="line">PasswordAuthentication <span class="built_in">yes</span></span><br><span class="line">ListenAddress 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p>此时，可以尝试在台式机上，用本机的Windows终端SSH连接WSL，能否成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ssh username@localhost -p 3141</span></span><br><span class="line">ssh xh@localhost -p 3141</span><br></pre></td></tr></table></figure>
+
+<p>只要成功，第一步就完成了。</p>
+<h1 id="配置防火墙"><a href="#配置防火墙" class="headerlink" title="配置防火墙"></a>配置防火墙</h1><p>因为WSL的地址每次重启都会变，但是无论怎么变，在台式机上总是可以通过localhost去访问WSL。<br>所以我们转变思路，用笔记本直接连台式机的某一端口，然后在台式机那一端口上做转发，转发到localhost上，就可以不用管WSL地址，总能连上去。</p>
+<p>所以我们这里配置一下台式机的防火墙。</p>
+<p>![image-20250318112432107](Y:\Typora images\image-20250318112432107.png)</p>
+<p>入站规则-&gt;新建规则-&gt;端口-&gt;TCP，特定本地端口：3141-&gt;允许连接-&gt;域、专用、公用-&gt;名称描述任意-&gt;完成</p>
+<p>配置完成后，在台式机的cmd，键入以下命令做转发：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=3141 listenaddress=0.0.0.0 connectport=3141 connectaddress=localhost</span><br></pre></td></tr></table></figure>
+
+<p>输入一下命令查看规则建立了没有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure>
+
+<p>到此就大功告成了，可以在笔记本上用以下命令去连接台式机的WSL</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ssh username@台式机的IP地址 -p 3141</span></span><br><span class="line">ssh xh@192.168.0.110 -p 3141</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/17/%E5%90%8C%E5%B1%80%E5%9F%9F%E7%BD%91SSH%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8WSL2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/" data-id="cm8fo82wa000140rs1izvd49w" data-title="同局域网SSH连接其他机器WSL2配置记录" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/03/18/Windows%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Hugo%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Windows环境部署Hugo记录
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">三月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/19/%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9DNS%E8%AE%BF%E9%97%AEGitHub/">通过修改DNS访问GitHub</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">Hexo部署记录</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/18/Windows%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Hugo%E8%AE%B0%E5%BD%95/">Windows环境部署Hugo记录</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/17/%E5%90%8C%E5%B1%80%E5%9F%9F%E7%BD%91SSH%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8WSL2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">同局域网SSH连接其他机器WSL2配置记录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 ChenFeng<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

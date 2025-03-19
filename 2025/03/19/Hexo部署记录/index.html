@@ -1,105 +1,164 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo部署记录 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="本地部署首先需要安装一下Git和Node.js 安装Git  Windows&#x2F;Mac用户：从Git官网下载安装包，按提示安装。 安装完成后，终端输入 git --version 验证是否成功。  安装Node.js  从Node.js官网下载LTS版本安装包。安装完成后，终端输入 node -v 和 npm -v 检查版本。  确认无误后就可以安装Hexo了 安装并初始化Hexo终端执行">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo部署记录 | Hexo</title><meta name="author" content="ChenFeng"><meta name="copyright" content="ChenFeng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本地部署首先需要安装一下Git和Node.js 安装Git  Windows&#x2F;Mac用户：从Git官网下载安装包，按提示安装。 安装完成后，终端输入 git --version 验证是否成功。  安装Node.js  从Node.js官网下载LTS版本安装包。安装完成后，终端输入 node -v 和 npm -v 检查版本。  确认无误后就可以安装Hexo了 安装并初始化Hexo终端执行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo部署记录">
 <meta property="og:url" content="http://example.com/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="本地部署首先需要安装一下Git和Node.js 安装Git  Windows&#x2F;Mac用户：从Git官网下载安装包，按提示安装。 安装完成后，终端输入 git --version 验证是否成功。  安装Node.js  从Node.js官网下载LTS版本安装包。安装完成后，终端输入 node -v 和 npm -v 检查版本。  确认无误后就可以安装Hexo了 安装并初始化Hexo终端执行">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
 <meta property="article:published_time" content="2025-03-19T07:28:07.000Z">
-<meta property="article:modified_time" content="2025-03-19T08:38:39.546Z">
+<meta property="article:modified_time" content="2025-03-19T08:44:06.883Z">
 <meta property="article:author" content="ChenFeng">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hexo部署记录",
+  "url": "http://example.com/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2025-03-19T07:28:07.000Z",
+  "dateModified": "2025-03-19T08:44:06.883Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "ChenFeng",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
       
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">记录技术点滴</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
 
-      <div class="outer">
-        <section id="main"><article id="post-Hexo部署记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" class="article-date">
-  <time class="dt-published" datetime="2025-03-19T07:28:07.000Z" itemprop="datePublished">2025-03-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      Hexo部署记录
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h1><p>首先需要安装一下Git和Node.js</p>
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo部署记录',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">Hexo部署记录</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Hexo部署记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-19T07:28:07.000Z" title="发表于 2025-03-19 15:28:07">2025-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-19T08:44:06.883Z" title="更新于 2025-03-19 16:44:06">2025-03-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h1><p>首先需要安装一下Git和Node.js</p>
 <p>安装Git</p>
 <ul>
 <li>Windows&#x2F;Mac用户：从<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git官网</a>下载安装包，按提示安装。</li>
@@ -129,7 +188,7 @@
 <h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>终端执行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 主题仓库地址 themes/主题名</span><br></pre></td></tr></table></figure>
 
-<p>然后在 <code>_config.yml</code> 中修改 <code>theme: 主题名</code>。（如果没有这行直接添加上就行）</p>
+<p>然后在 <code>_config.yml</code> 中修改 <code>theme: 主题名</code>。</p>
 <p>具体操作可以参考主题的教程：</p>
 <p>例如Butterfly的教程：<a target="_blank" rel="noopener" href="https://butterfly.js.org/posts/21cfbf15/#%E5%8D%87%E7%B4%9A%E5%BB%BA%E8%AD%B0">Butterfly 文檔(一) 快速開始 | Butterfly</a></p>
 <h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p>在博客根目录（我这里是myblog）输入以下命令来创建文章</p>
@@ -165,131 +224,4 @@
 <ul>
 <li>完成后访问 <code>https://用户名.github.io</code> 即可看到在线博客。</li>
 </ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" data-id="cm8focwgs0000isrs406w1uvs" data-title="Hexo部署记录" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2025/03/19/%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9DNS%E8%AE%BF%E9%97%AEGitHub/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">前一篇</strong>
-      <div class="article-nav-title">
-        
-          通过修改DNS访问GitHub
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2025/03/18/Windows%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Hugo%E8%AE%B0%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">Windows环境部署Hugo记录</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">三月 2025</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2025/03/19/%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9DNS%E8%AE%BF%E9%97%AEGitHub/">通过修改DNS访问GitHub</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">Hexo部署记录</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/18/Windows%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Hugo%E8%AE%B0%E5%BD%95/">Windows环境部署Hugo记录</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/17/%E5%90%8C%E5%B1%80%E5%9F%9F%E7%BD%91SSH%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8WSL2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/">同局域网SSH连接其他机器WSL2配置记录</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2025 ChenFeng<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">ChenFeng</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">http://example.com/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Hexo</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/03/18/Windows%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Hugo%E8%AE%B0%E5%BD%95/" title="Windows环境部署Hugo记录"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Windows环境部署Hugo记录</div></div><div class="info-2"><div class="info-item-1">HUGO项目地址：https://github.com/gohugoio/hugo/releases 下载hugo的包需要先下载hugo的包，官网推荐部署扩展版 ![image-20250318143017402](Y:\Typora images\image-20250318143017402.png) ![image-20250318143114508](Y:\Typora images\image-20250318143114508.png) 然后创建一个文件夹：F:\Program Files\hugo\bin 将下载好的包解压到这个bin文件夹下，解压后有这三个文件：  hugo.exe LICENSE README.md  配置环境变量Win+S搜索“环境变量”→编辑系统环境变量→高级→环境变量 选择系统变量的Path，点下面的编辑按钮，新建一个，把上面的文件夹路径粘贴进去，然后确定 1F:\Program...</div></div></div></a><a class="pagination-related" href="/2025/03/19/%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9DNS%E8%AE%BF%E9%97%AEGitHub/" title="通过修改DNS访问GitHub"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">通过修改DNS访问GitHub</div></div><div class="info-2"><div class="info-item-1">获取可用的DNS打开 DNS查询网站，填写github.com,再点击监测按钮 ![image-20250319161438074](Y:\Typora images\image-20250319161438074.png) 然后在下面能连接到GitHub的DNS里选一个，复制 ![image-20250319161525138](Y:\Typora images\image-20250319161525138.png) 方法1：修改备用DNS服务器Windows设置→网络和Internet→状态→更改适配器选项，然后选择自己使用的网络，右键单击→属性→Internet协议版本4（TCP&#x2F;IPv4）→属性，将上面复制的DNS填入到备用DNS服务器中，首选DNS服务器这里使用的是百度的 ![image-20250319162558323](Y:\Typora...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">ChenFeng</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2"><span class="toc-number">1.</span> <span class="toc-text">本地部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E5%88%9D%E5%A7%8B%E5%8C%96Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装并初始化Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEHexo"><span class="toc-number">1.2.</span> <span class="toc-text">配置Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">更换主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-number">1.3.</span> <span class="toc-text">创建文章</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages"><span class="toc-number">2.</span> <span class="toc-text">部署到GitHub Pages</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/19/%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9DNS%E8%AE%BF%E9%97%AEGitHub/" title="通过修改DNS访问GitHub">通过修改DNS访问GitHub</a><time datetime="2025-03-19T08:12:34.000Z" title="发表于 2025-03-19 16:12:34">2025-03-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/19/Hexo%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/" title="Hexo部署记录">Hexo部署记录</a><time datetime="2025-03-19T07:28:07.000Z" title="发表于 2025-03-19 15:28:07">2025-03-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/18/Windows%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Hugo%E8%AE%B0%E5%BD%95/" title="Windows环境部署Hugo记录">Windows环境部署Hugo记录</a><time datetime="2025-03-18T12:06:59.000Z" title="发表于 2025-03-18 20:06:59">2025-03-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/17/%E5%90%8C%E5%B1%80%E5%9F%9F%E7%BD%91SSH%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E6%9C%BA%E5%99%A8WSL2%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/" title="同局域网SSH连接其他机器WSL2配置记录">同局域网SSH连接其他机器WSL2配置记录</a><time datetime="2025-03-17T11:41:47.000Z" title="发表于 2025-03-17 19:41:47">2025-03-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By ChenFeng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
